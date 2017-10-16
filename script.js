@@ -11,13 +11,13 @@ function checkAge() {
         document.body.appendChild(image);
     }
 
-    (inputValueAge === requiredAge) ? (secretContent(), yourAge.innerText = 'Congratulations ' + inputValueName + ' your age is valid ') :
+    (inputValueAge === requiredAge) ? secretContent():
 
-    (inputValueAge > requiredAge) ? (yourAge.innerText = inputValueName + ' Your age exceeds ' + (inputValueAge - requiredAge) + ' year(s)') :
+        (inputValueAge > requiredAge) ? (yourAge.innerText = inputValueName + ' Your age exceeds ' + (inputValueAge - requiredAge) + ' year(s)') :
 
-    (inputValueAge < requiredAge && inputValueAge > 0) ? (yourAge.innerText = inputValueName + ' You need wait ' + (requiredAge - inputValueAge) + ' year(s) to your 18') :
+        (inputValueAge < requiredAge && inputValueAge > 0) ? (yourAge.innerText = inputValueName + ' You need wait ' + (requiredAge - inputValueAge) + ' year(s) to your 18') :
 
-    (inputValueAge == '') ? (yourAge.innerText = 'Enter your Age!') : (yourAge.innerText = 'Enter a valid value ');
+        (inputValueAge == '') ? (yourAge.innerText = 'Enter your Age!') : (yourAge.innerText = 'Enter a valid value ');
 
     function checkName() {
         (inputValueName.length == 0) ? yourName.innerText = 'Enter your Name!': yourName.innerText = '';
