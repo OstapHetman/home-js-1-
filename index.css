@@ -52,8 +52,14 @@
         color: #212121;
     }
     
-    span {
+    p {
         color: #b71c1c;
         font-weight: 700;
         margin-top: 1em;
+    }
+    
+    img {
+        position: absolute;
+        top: 0;
+        left: 1.2%
     }

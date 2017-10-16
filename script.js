@@ -1,29 +1,37 @@
 function checkAge() {
-    var requiredAge = 18;
-    var inputValueName = document.getElementById('name').value;
-    var inputValueAge = Number(document.getElementById('age').value);
-    var yourAge = document.getElementById('yourAge');
-    var yourName = document.getElementById('yourName');
+    let requiredAge = 18,
+        inputValueName = document.getElementById('name').value,
+        inputValueAge = +(document.getElementById('age').value),
+        yourAge = document.getElementById('yourAge'),
+        yourName = document.getElementById('yourName'),
+        image = document.createElement('IMG');
 
     if (inputValueAge === requiredAge) {
-        yourAge.innerHTML = 'Congratulations ' + inputValueName + ' your age is valid ';
+        yourAge.innerText = 'Congratulations ' + inputValueName + ' your age is valid ';
+        secretContent();
 
     } else if (inputValueAge > requiredAge) {
-        yourAge.innerHTML = inputValueName + ' Your age exceeds ' + (inputValueAge - requiredAge) + ' year(s)';
+        yourAge.innerText = inputValueName + ' Your age exceeds ' + (inputValueAge - requiredAge) + ' year(s)';
 
     } else if (inputValueAge < requiredAge && inputValueAge > 0) {
-        yourAge.innerHTML = inputValueName + ' You need wait ' + (requiredAge - inputValueAge) + ' year(s) to your 18';
+        yourAge.innerText = inputValueName + ' You need wait ' + (requiredAge - inputValueAge) + ' year(s) to your 18';
 
     } else if (inputValueAge == '') {
-        yourAge.innerHTML = 'Enter your Age!';
+        yourAge.innerText = 'Enter your Age!';
 
     } else {
-        yourAge.innerHTML = 'Enter a valid value ';
+        yourAge.innerText = 'Enter a valid value ';
     }
 
-    if (inputValueName.length == 0 || inputValueName == null || inputValueName == '') {
-        yourName.innerHTML = 'Enter your Name!';
-    } else {
-        yourName.innerHTML = '';
+    function checkName() {
+        (inputValueName.length == 0) ? yourName.innerText = 'Enter your Name!': yourName.innerText = '';
+
     }
+
+    function secretContent() {
+        image.src = "it.jpg";
+        document.body.appendChild(image);
+    }
+
+    checkName();
 }
