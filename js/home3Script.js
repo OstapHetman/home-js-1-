@@ -9,18 +9,15 @@ function checkAge() {
         case (inputValueAge === requiredAge):
             yourAge.innerText = 'Congratulations ' + inputValueName + ' your age is valid ';
             break;
-    }
-    switch (true) {
+
         case (inputValueAge > requiredAge):
             (yourAge.innerText = inputValueName + ' Your age exceeds ' + (inputValueAge - requiredAge) + ' year(s)');
             break;
-    }
-    switch (true) {
+
         case (inputValueAge < requiredAge && inputValueAge > 0):
             (yourAge.innerText = inputValueName + ' You need wait ' + (requiredAge - inputValueAge) + ' year(s) to your 18');
             break;
-    }
-    switch (true) {
+
         case (inputValueAge == ''):
             (yourAge.innerText = 'Enter your Age!');
             break;
