@@ -73,16 +73,16 @@ let cars = {
         },
     ],
 
-    addNewCars: function() {
+    addNewCar: function(firmName, modelName, engine, age) {
         this.data.push({
-            firmName: "Peugeot",
-            modelName: "308",
-            engine: 2.0,
-            age: 2013
+            firmName: firmName,
+            modelName: modelName,
+            engine: engine,
+            age: age
         });
     }
 };
-cars.addNewCars();
+cars.addNewCar("Peugeot", "308", 2.0, 2013);
 console.log(cars);
                         </code>
                     </pre>
