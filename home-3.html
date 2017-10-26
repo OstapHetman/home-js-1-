@@ -3,37 +3,81 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>Home Tasks</title>
     <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <title>MainAcademy Tasks</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">HOME Task 1</a></li>
-            <li><a href="home-2.html">HOME Task 2</a></li>
-            <li class="active"><a href="home-3.html">HOME Task 3</a></li>
-        </ul>
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-toggleable-md fixed-top navbar-inverse bg-primary">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">MainAcademy</a>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item font-weight-bold  text-white"><i class="fa fa-user-o  text-white" aria-hidden="true"></i> OSTAP</li>
+            </ul>
+        </div>
     </nav>
+    <!-- End Navigation -->
 
-    <div>
-        <form>
-            <label for="name">Enter your Name</label>
-            <input id="name" placeholder="Enter your name">
+    <div class="container-fluid">
+        <div class="row">
 
-            <label for="age" class="age">Enter your age</label>
-            <input id="age" placeholder="Enter your age">
-            <button type="button" onclick="checkAge()">Submit</button>
-        </form>
+            <!-- Start Content Side -->
+            <div class="col-md-9">
+                <div class="card col-md-6 offset-md-3">
+                    <form class="card-block">
+                        <div class="form-group">
+                            <label for="name">Enter your Name</label>
+                            <input class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Enter your age</label>
+                            <input class="form-control" id="age" placeholder="Enter your age">
+                        </div>
+                        <button type="button" class="btn btn-primary d-block mx-auto" onclick="checkAge()">Submit</button>
+                        <p class="bg-info text-white text-center rounded mt-3 " id="yourAge"></p>
+                        <p class="bg-info text-white text-center rounded mt-3" id="yourName"></p>
+                    </form>
+                </div>
+            </div>
+            <!-- End Content Side -->
 
-        <p id="yourAge"></p>
-        <p id="yourName"></p>
+            <!-- Start SideBar -->
+            <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebar">
+                <div class="list-group">
+                    <a href="index.html" class="list-group-item">Task - 1 (Secret Content and Ternary Operators)</a>
+                    <a href="home-2.html" class="list-group-item">Task - 2 (Calculate Function)</a>
+                    <a href="home-3.html" class="list-group-item active">Task - 3 (Switch/Case)</a>
+                    <a href="home-4.html" class="list-group-item">Task - 4</a>
+                    <a href="#" class="list-group-item">Task - 5</a>
+                    <a href="#" class="list-group-item">Task - 6</a>
+                    <a href="#" class="list-group-item">Task - 7</a>
+                </div>
+            </div>
+            <!-- END SideBar -->
+        </div>
     </div>
+    <!--/.container-->
 
-    <script src="js/home3Script.js">
-    </script>
+    <!-- FOOTER -->
+    <footer class="fixed-bottom  bg-primary">
+        <p class="text-white my-auto p-3">&copy; O.Hetman 2017</p>
+    </footer>
+
+    <!-- Jquery and Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- Home Task Script -->
+    <script src="js/home3Script.js"></script>
 </body>
 
 </html>
