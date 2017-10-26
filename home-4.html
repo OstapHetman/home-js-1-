@@ -26,48 +26,64 @@
         </div>
     </nav>
     <!-- End Navigation -->
-    <div class="alert alert-success" role="alert">
-        <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
-    </div>
-
     <div class="container-fluid">
         <div class="row">
 
             <!-- Start Content Side -->
+
             <div class="col-md-9">
+                <h2>Add new method to Object</h2>
                 <div class="card col-md-12 ">
                     <button type="button" class="btn btn-outline-primary d-block ml-auto mt-2" id="clipboard" data-trigger="hover" data-clipboard-target="#code" data-toggle="tooltip" data-placement="left" title="Copy to clipboard" aria-label="Copied!">
                     Copy
                     </button>
                     <pre>
                         <code id="code">
-function checkAge() {
-    let requiredAge = 18,
-        inputValueName = document.getElementById('name').value,
-        inputValueAge = +(document.getElementById('age').value),
-        yourAge = document.getElementById('yourAge'),
-        yourName = document.getElementById('yourName'),
-        image = document.createElement('IMG');
+let cars = {
 
-    function secretContent() {
-        image.src = "it.jpg";
-        document.body.appendChild(image);
+    data: [{
+            firmName: "Toyota",
+            modelName: "Camry",
+            engine: 1.2,
+            age: 2012
+        },
+        {
+            firmName: "Mercedes",
+            modelName: "GLE",
+            engine: 2.0,
+            age: 2017
+        },
+        {
+            firmName: "Nissan",
+            modelName: "Quashqai",
+            engine: 1.6,
+            age: 2016
+        },
+        {
+            firmName: "ZAZ",
+            modelName: "Forza",
+            engine: 1.1,
+            age: 2008
+        },
+        {
+            firmName: "Opel",
+            modelName: "Astra",
+            engine: 1.6,
+            age: 2011
+        },
+    ],
+
+    addNewCars: function() {
+        this.data.push({
+            firmName: "Peugeot",
+            modelName: "308",
+            engine: 2.0,
+            age: 2013
+        });
     }
-
-    (inputValueAge === requiredAge) ? secretContent():
-
-        (inputValueAge > requiredAge) ? (yourAge.innerText = inputValueName + ' Your age exceeds ' + (inputValueAge - requiredAge) + ' year(s)') :
-
-        (inputValueAge < requiredAge && inputValueAge > 0) ? (yourAge.innerText = inputValueName + ' You need wait ' + (requiredAge - inputValueAge) + ' year(s) to your 18') :
-
-        (inputValueAge == '') ? (yourAge.innerText = 'Enter your Age!') : (yourAge.innerText = 'Enter a valid value ');
-
-    function checkName() {
-        (inputValueName.length == 0) ? yourName.innerText = 'Enter your Name!': yourName.innerText = '';
-    }
-
-    checkName();
-}
+};
+cars.addNewCars();
+console.log(cars);
                         </code>
                     </pre>
                 </div>
@@ -102,6 +118,7 @@ function checkAge() {
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <!-- ClipBoard Lib -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+    <script src="js/clipboard.js"></script>
     <!-- Home Task Script -->
     <script src="js/home4Script.js"></script>
 </body>

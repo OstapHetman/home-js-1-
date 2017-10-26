@@ -1,26 +1,45 @@
-$(function() {
-    $('[data-toggle="tooltip"]').tooltip()
-});
+let cars = {
 
-var clipboard = new Clipboard('#clipboard');
+    data: [{
+            firmName: "Toyota",
+            modelName: "Camry",
+            engine: 1.2,
+            age: 2012
+        },
+        {
+            firmName: "Mercedes",
+            modelName: "GLE",
+            engine: 2.0,
+            age: 2017
+        },
+        {
+            firmName: "Nissan",
+            modelName: "Quashqai",
+            engine: 1.6,
+            age: 2016
+        },
+        {
+            firmName: "ZAZ",
+            modelName: "Forza",
+            engine: 1.1,
+            age: 2008
+        },
+        {
+            firmName: "Opel",
+            modelName: "Astra",
+            engine: 1.6,
+            age: 2011
+        },
+    ],
 
-clipboard.on('success', function(e) {
-    console.info('Action:', e.action);
-    console.info('Text:', e.text);
-    setTooltip(e.trigger, 'Copied!');
-    hideTooltip(e.trigger);
-    e.clearSelection();
-});
-
-function setTooltip(btn, message) {
-    $(btn)
-        .attr('data-original-title', message)
-        .tooltip('show');
-}
-
-function hideTooltip(btn) {
-    setTimeout(function() {
-        $(btn).tooltip('hide')
-            .attr('data-original-title', "");
-    }, 1000);
-}
+    addNewCars: function() {
+        this.data.push({
+            firmName: "Peugeot",
+            modelName: "308",
+            engine: 2.0,
+            age: 2013
+        });
+    }
+};
+cars.addNewCars();
+console.log(cars);
