@@ -1,5 +1,4 @@
 let cars = {
-
     data: [{
             firmName: "Toyota",
             modelName: "Camry",
@@ -31,15 +30,18 @@ let cars = {
             age: 2011
         },
     ],
+    sortCars: this.data.sort(function(a, b) {
+        let brandA = a.firmName.toUpperCase();
+        let brandB = b.firmName.toUpperCase();
+        let comparison = 0;
 
-    addNewCar: function(firmName, modelName, engine) {
-        this.data.push({
-            firmName: firmName,
-            modelName: modelName,
-            engine: engine,
-            age: arguments[3]
-        });
-    }
+        if (brandA > brandB) {
+            comparison = 1;
+        } else if (brandA < brandB) {
+            comparison = -1;
+        }
+        return comparison;
+    })
 };
-cars.addNewCar("Peugeot", "308", 2.0, 2013);
+
 console.log(cars);
