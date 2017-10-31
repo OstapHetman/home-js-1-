@@ -32,17 +32,17 @@
             <!-- Start Content Side -->
 
             <div class="col-sm-12 col-md-9">
-                <h2>Recursive function</h2>
+                <h2>Random Number Between two Numbers</h2>
                 <div class="card col-md-12 ">
                     <button type="button" class="btn btn-outline-primary d-block ml-auto mt-2" id="clipboard" data-trigger="hover" data-clipboard-target="#factorial" data-toggle="tooltip" data-placement="left" title="Copy to clipboard" aria-label="Copied!">
                     Copy
                     </button>
                     <pre>
                         <code id="factorial">
-function factorial(n) {
-    return (n != 1) ? n * factorial(n - 1) : 1;
-}
-console.log(factorial(3)); 
+let minNumber = 70,
+    maxNumber = 100,
+    lottery = function() { return Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber; }
+console.log(lottery());
                         </code>
                     </pre>
                 </div>
@@ -123,8 +123,8 @@ console.log(cars);
                     <a href="home-2.html" class="list-group-item">Task - 2 (Calculate Function)</a>
                     <a href="home-3.html" class="list-group-item">Task - 3 (Switch/Case)</a>
                     <a href="home-4.html" class="list-group-item ">Task - 4 (Object, Function)</a>
-                    <a href="home-5.html" class="list-group-item active">Task - 5 (Recursion, Sort)</a>
-                    <a href="home-6.html" class="list-group-item">Task - 6</a>
+                    <a href="home-5.html" class="list-group-item">Task - 5 (Recursion, Sort)</a>
+                    <a href="home-6.html" class="list-group-item active">Task - 6</a>
                     <a href="home-6.html" class="list-group-item">Task - 7</a>
                 </div>
             </div>
@@ -146,7 +146,7 @@ console.log(cars);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
     <script src="js/clipboard.js"></script>
     <!-- Home Task Script -->
-    <script src="js/home5Script.js"></script>
+    <script src="js/home6Script.js"></script>
 </body>
 
 </html>
