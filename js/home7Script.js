@@ -17,16 +17,20 @@ let checkOs = (function() {
     outputOs.innerHTML = "<b>Your Operating system is: </b>" + osName;
 })();
 
+// Check Information About Model Browser
 let checkBrowser = (function() {
     isIE = false || !!document.documentMode;
     isEdge = !isIE && !!window.StyleMedia;
-    (navigator.userAgent.indexOf("Chrome") != -1 && !isEdge) ? (browserName = 'Chrome') :
 
-    (navigator.userAgent.indexOf("Safari") != -1 && !isEdge) ? (browserName = 'Safari') :
+    (userAgent.match(/Opera|OPR\//)) ? (browserName = 'Opera') :
 
-    (navigator.userAgent.indexOf("Firefox") != -1) ? (browserName = 'Firefox') :
+    (userAgent.indexOf("Chrome") != -1 && !isEdge) ? (browserName = 'Chrome') :
 
-    ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) ? (browserName = 'IE') :
+    (userAgent.indexOf("Safari") != -1 && !isEdge) ? (browserName = 'Safari') :
+
+    (userAgent.indexOf("Firefox") != -1) ? (browserName = 'Firefox') :
+
+    ((userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) ? (browserName = 'IE') :
 
     (isEdge) ? (browserName = 'Edge') : (browserName = 'Other-browser')
 
