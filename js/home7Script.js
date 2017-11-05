@@ -35,7 +35,8 @@ let checkBrowser = (function() {
     (userAgent.indexOf("Chrome") != -1 && !isEdge) ? (browserName = 'Chrome', match = window.navigator.userAgent.match(/(?:Chrom(?:e|ium))\/([0-9]+)\./),
         version = match ? parseInt(match[1]) : "I dont'know") :
 
-    (userAgent.indexOf("Safari") != -1 && !isEdge) ? (browserName = 'Safari') :
+    (userAgent.indexOf("Safari") != -1 && !isEdge) ? (browserName = 'Safari', match = window.navigator.userAgent.match(/(?:Safari)\/([0-9]+)\./),
+        version = match ? parseInt(match[1]) : "I dont'know") :
 
     (userAgent.indexOf("Firefox") != -1) ? (browserName = 'Firefox', match = window.navigator.userAgent.match(/(?:Firefox)\/([0-9]+)\./),
         version = match ? parseInt(match[1]) : "I dont'know") :
