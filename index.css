@@ -26,3 +26,29 @@ pre code {
     display: flex;
     flex-direction: column;
 }
+
+#preloader {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    font-size: 2rem;
+    z-index: 999;
+}
+
+.done {
+    opacity: 0;
+}
+
+.opacity {
+    background-color: white;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.gallery {
+    min-height: 350px;
+}
+
+.gallery img {
+    padding: 0.2em;
+}

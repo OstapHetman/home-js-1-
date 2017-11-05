@@ -55,3 +55,35 @@ let checkWindow = (function() {
     outputWidth.innerHTML = "<b>Your Window Width is: </b>" + windowWidth + "px";
     outputHeight.innerHTML = "<b>Your Window Height is: </b>" + windowHeight + "px";
 })();
+
+// Percent Preloader
+let images = document.images,
+    totalImages = images.length,
+    imagesLoadedCount = 0,
+    preloader = document.getElementById('preloader'),
+    percent = document.getElementById('load-percent'),
+    body = document.getElementsByTagName('BODY')[0];
+
+for (let i = 0; i < totalImages; i++) {
+    imageClone = new Image();
+    imageClone.onload = imageLoaded;
+    imageClone.onerror = imageLoaded;
+    imageClone.src = images[i].src;
+}
+
+function imageLoaded() {
+    imagesLoadedCount++;
+    percent.innerHTML = (((100 / totalImages) * imagesLoadedCount) << 0) + '%';
+    body.classList.add('opacity');
+    if (imagesLoadedCount >= totalImages) {
+
+        setTimeout(function() {
+            if (!preloader.classList.contains('done')) {
+                preloader.classList.add('done');
+                body.classList.remove('opacity');
+
+            }
+        }, 1000);
+    }
+    console.log(percent);
+}
