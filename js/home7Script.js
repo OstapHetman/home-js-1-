@@ -37,7 +37,8 @@ let checkBrowser = (function() {
 
     (userAgent.indexOf("Safari") != -1 && !isEdge) ? (browserName = 'Safari') :
 
-    (userAgent.indexOf("Firefox") != -1) ? (browserName = 'Firefox') :
+    (userAgent.indexOf("Firefox") != -1) ? (browserName = 'Firefox', match = window.navigator.userAgent.match(/(?:Firefox)\/([0-9]+)\./),
+        version = match ? parseInt(match[1]) : "I dont'know") :
 
     ((userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) ? (browserName = 'IE') :
 
