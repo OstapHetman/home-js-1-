@@ -23,7 +23,7 @@ let checkOs = (function() {
     outputOs.innerHTML = "<b>Your Operating system is: </b>" + osName;
 })();
 
-// Check Information About Browser Model
+// Check Information About Browser Model and Browser Version
 let checkBrowser = (function() {
 
     isIE = false || !!document.documentMode;
@@ -40,7 +40,8 @@ let checkBrowser = (function() {
     (userAgent.indexOf("Firefox") != -1) ? (browserName = 'Firefox', match = window.navigator.userAgent.match(/(?:Firefox)\/([0-9]+)\./),
         version = match ? parseInt(match[1]) : "I dont'know") :
 
-    ((userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) ? (browserName = 'IE') :
+    ((userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) ? (browserName = 'IE', match = window.navigator.userAgent.match(/(?:rv)\:([0-9]+)\./),
+        version = match ? parseInt(match[1]) : "I dont'know") :
 
     (isEdge) ? (browserName = 'Edge') : (browserName = 'Other-browser')
 
