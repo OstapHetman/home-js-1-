@@ -21,3 +21,7 @@ img {
     left: 1.2%;
     z-index: 9999;
 }
+
+pre code {
+    display: flex;
+}
