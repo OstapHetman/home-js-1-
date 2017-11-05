@@ -24,4 +24,5 @@ img {
 
 pre code {
     display: flex;
+    flex-direction: column;
 }

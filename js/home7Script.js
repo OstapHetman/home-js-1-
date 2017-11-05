@@ -1,5 +1,7 @@
 let osName = "Unknown",
-    outputOs = document.getElementById("userAgent"),
+    browserName = "Unknown",
+    outputOs = document.getElementById("os"),
+    outputBrowser = document.getElementById("browser"),
     userAgent = window.navigator.userAgent;
 
 // Check Information About OS
@@ -13,4 +15,20 @@ let checkOs = (function() {
     if (userAgent.indexOf("X11") != -1) osName = "UNIX";
     if (userAgent.indexOf("Linux") != -1) osName = "Linux";
     outputOs.innerHTML = "<b>Your Operating system is: </b>" + osName;
+})();
+
+let checkBrowser = (function() {
+    isIE = false || !!document.documentMode;
+    isEdge = !isIE && !!window.StyleMedia;
+    (navigator.userAgent.indexOf("Chrome") != -1 && !isEdge) ? (browserName = 'Chrome') :
+
+    (navigator.userAgent.indexOf("Safari") != -1 && !isEdge) ? (browserName = 'Safari') :
+
+    (navigator.userAgent.indexOf("Firefox") != -1) ? (browserName = 'Firefox') :
+
+    ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) ? (browserName = 'IE') :
+
+    (isEdge) ? (browserName = 'Edge') : (browserName = 'Other-browser')
+
+    outputBrowser.innerHTML = "<b>Your Browser is: </b>" + browserName;
 })();
