@@ -1,7 +1,13 @@
 let osName = "Unknown",
     browserName = "Unknown",
+    browserVersion = "Unknown",
+    windowWidth = window.innerWidth,
+    windowHeight = window.innerHeight,
     outputOs = document.getElementById("os"),
     outputBrowser = document.getElementById("browser"),
+    outputVersion = document.getElementById("browserVersion"),
+    outputWidth = document.getElementById("windowWidth"),
+    outputHeight = document.getElementById("windowHeight"),
     userAgent = window.navigator.userAgent;
 
 // Check Information About OS
@@ -17,14 +23,17 @@ let checkOs = (function() {
     outputOs.innerHTML = "<b>Your Operating system is: </b>" + osName;
 })();
 
-// Check Information About Model Browser
+// Check Information About Browser Model
 let checkBrowser = (function() {
+
     isIE = false || !!document.documentMode;
     isEdge = !isIE && !!window.StyleMedia;
 
-    (userAgent.match(/Opera|OPR\//)) ? (browserName = 'Opera') :
+    (userAgent.match(/Opera|OPR\//)) ? (browserName = 'Opera', match = window.navigator.userAgent.match(/(?:OPR|Opera)\/([0-9]+)\./),
+        version = match ? parseInt(match[1]) : "I dont'know") :
 
-    (userAgent.indexOf("Chrome") != -1 && !isEdge) ? (browserName = 'Chrome') :
+    (userAgent.indexOf("Chrome") != -1 && !isEdge) ? (browserName = 'Chrome', match = window.navigator.userAgent.match(/(?:Chrom(?:e|ium))\/([0-9]+)\./),
+        version = match ? parseInt(match[1]) : "I dont'know") :
 
     (userAgent.indexOf("Safari") != -1 && !isEdge) ? (browserName = 'Safari') :
 
@@ -35,4 +44,11 @@ let checkBrowser = (function() {
     (isEdge) ? (browserName = 'Edge') : (browserName = 'Other-browser')
 
     outputBrowser.innerHTML = "<b>Your Browser is: </b>" + browserName;
+    outputVersion.innerHTML = "<b>Your Browser Version is: </b>" + version;
+})();
+
+// Check window Width and Height
+let checkWindow = (function() {
+    outputWidth.innerHTML = "<b>Your Window Width is: </b>" + windowWidth + "px";
+    outputHeight.innerHTML = "<b>Your Window Height is: </b>" + windowHeight + "px";
 })();
