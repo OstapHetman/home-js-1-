@@ -85,5 +85,4 @@ function imageLoaded() {
             }
         }, 1000);
     }
-    console.log(percent);
 }
