@@ -52,3 +52,19 @@ pre code {
 .gallery img {
     padding: 0.2em;
 }
+
+ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin-top: 1rem !important;
+}
+
+.droptarget {
+    float: left;
+    width: 40%;
+    min-height: 100px;
+    border: 1px solid #aaaaaa;
+    margin: auto;
+    background-color: white;
+}
