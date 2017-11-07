@@ -4,21 +4,12 @@
      // The dataTransfer.setData() method sets the data type and the value of the dragged data
      event.dataTransfer.setData("Text", event.target.id);
 
-     // Output some text when starting to drag the p element
-     document.getElementById("demo").innerHTML = "Started to drag the p element.";
 
      // Change the opacity of the draggable element
      event.target.style.opacity = "0.4";
  });
 
- // While dragging the p element, change the color of the output text
- document.addEventListener("drag", function(event) {
-     document.getElementById("demo").style.color = "red";
- });
-
- // Output some text when finished dragging the p element and reset the opacity
  document.addEventListener("dragend", function(event) {
-     document.getElementById("demo").innerHTML = "Finished dragging the p element.";
      event.target.style.opacity = "1";
  });
 
@@ -35,6 +26,7 @@
  // By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element
  document.addEventListener("dragover", function(event) {
      event.preventDefault();
+
  });
 
  // When the draggable p element leaves the droptarget, reset the DIVS's border style
@@ -53,7 +45,6 @@
  document.addEventListener("drop", function(event) {
      event.preventDefault();
      if (event.target.className == "droptarget") {
-         document.getElementById("demo").style.color = "";
          event.target.style.border = "";
          var data = event.dataTransfer.getData("Text");
          event.target.appendChild(document.getElementById(data));
