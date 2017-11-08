@@ -53,9 +53,10 @@ pre code {
     padding: 0.2em;
 }
 
-ul {
-    list-style: none;
-    text-align: center;
+ol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0;
     margin-top: 1rem !important;
 }
@@ -67,4 +68,8 @@ ul {
     border: 1px solid #aaaaaa;
     margin: auto;
     background-color: white;
+}
+
+.content-side {
+    min-height: 65% !important;
 }
