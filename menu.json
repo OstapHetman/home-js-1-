@@ -25,5 +25,9 @@
     {
         "display": "Task - 7 (userAgent)",
         "url": "home-7.html"
+    },
+    {
+        "display": "Task - 8 (Drag&Drop events)",
+        "url": "home-8.html"
     }
 ]
