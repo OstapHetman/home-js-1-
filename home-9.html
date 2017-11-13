@@ -1,0 +1,111 @@
+<!doctype>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>Home Tasks</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="preloader">
+        <span id="load-percent"></span>
+    </div>
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-toggleable-md fixed-top navbar-inverse bg-primary">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">MainAcademy</a>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:history.back(1)"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:history.forward(1)"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item font-weight-bold  text-white"><i class="fa fa-user-o  text-white" aria-hidden="true"></i> OSTAP</li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End Navigation -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Start Content Side -->
+
+            <div class="col-sm-12 col-md-9">
+                <h2>Information About User</h2>
+                <form class="card">
+                    <div class="form-group card-block">
+                        <small class="form-text text-muted">Choose a car brand</small>
+                        <select class="form-control" id="carBrand">
+                            <option>Choose...</option>
+                            <option>BMW</option>
+                            <option>Mercedes</option>
+                            <option>Opel</option>
+                            <option>Toyota</option>
+                            <option>Nissan</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group card-block">
+                        <small class="form-text text-muted">Choose a car model</small>
+                        <select class="form-control" id="carModel" disabled>
+                            <option selected disabled hidden>Choose...</option>
+                            <option>BMW</option>
+                            <option>Mercedes</option>
+                            <option>Opel</option>
+                            <option>Toyota</option>
+                            <option>Nissan</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-5 offset-5">
+                        <button type="button" class="btn btn-primary d-block">Reset</button>
+                    </div>
+                </form>
+
+            </div>
+
+
+            <!-- End Content Side -->
+
+            <!-- Start SideBar -->
+            <div class="col-sm-12 col-md-3 sidebar-offcanvas mt-sm-5" id="sidebar">
+                <div class="list-group" id="list-group">
+                    <a class="list-group-item" href="#">asdasd</a>
+                </div>
+            </div>
+            <!-- END SideBar -->
+        </div>
+    </div>
+    <!--/.container-->
+
+    <!-- FOOTER -->
+    <footer class="bg-primary">
+        <p class="text-white my-auto p-3">&copy; O.Hetman 2017</p>
+    </footer>
+
+    <!-- Jquery and Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- ClipBoard Lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+    <script src="js/clipboard.js"></script>
+    <!-- Home Task Script -->
+    <script src="js/home9Script.js"></script>
+    <script src="js/json-menu.js"></script>
+    <script src="js/jsonCarBrand.js"></script>
+
+</body>
+
+</html>
