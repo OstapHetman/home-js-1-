@@ -42,34 +42,24 @@
             <!-- Start Content Side -->
 
             <div class="col-sm-12 col-md-9">
-                <h2>Information About User</h2>
+                <h2>Select</h2>
                 <form class="card">
                     <div class="form-group card-block">
                         <small class="form-text text-muted">Choose a car brand</small>
                         <select class="form-control" id="carBrand">
-                            <option>Choose...</option>
-                            <option>BMW</option>
-                            <option>Mercedes</option>
-                            <option>Opel</option>
-                            <option>Toyota</option>
-                            <option>Nissan</option>
+                          
                         </select>
                     </div>
 
                     <div class="form-group card-block">
                         <small class="form-text text-muted">Choose a car model</small>
-                        <select class="form-control" id="carModel" disabled>
-                            <option selected disabled hidden>Choose...</option>
-                            <option>BMW</option>
-                            <option>Mercedes</option>
-                            <option>Opel</option>
-                            <option>Toyota</option>
-                            <option>Nissan</option>
+                        <select class="form-control" id="carModel" style="display:none;">
+                        
                         </select>
                     </div>
 
                     <div class="col-md-5 offset-5">
-                        <button type="button" class="btn btn-primary d-block">Reset</button>
+                        <input type="reset" value="Reset" class="btn btn-primary d-block">
                     </div>
                 </form>
 
@@ -101,10 +91,11 @@
     <!-- ClipBoard Lib -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
     <script src="js/clipboard.js"></script>
+    <!-- JSON Menu -->
+    <!-- <script src="js/json-menu.js"></script> -->
+
     <!-- Home Task Script -->
-    <script src="js/home9Script.js"></script>
-    <script src="js/json-menu.js"></script>
-    <script src="js/jsonCarBrand.js"></script>
+    <script src="js/getCars.js"></script>
 
 </body>
 

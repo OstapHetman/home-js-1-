@@ -1,19 +1,29 @@
-[{
-        "carBrand": "Choose"
-    },
-    {
-        "carBrand": "BMW"
-    },
-    {
-        "carBrand": "Mercedes"
-    },
-    {
-        "carBrand": "Nissan"
-    },
-    {
-        "carBrand": "Opel"
-    },
-    {
-        "carBrand": "Toyota"
-    }
-]
+{
+    "carsBrand": [{
+            "brand": "Toyota",
+            "models": [{
+                    "model": "Rav 4"
+                },
+                {
+                    "model": "Camry"
+                },
+                {
+                    "model": "Avensis"
+                }
+            ]
+        },
+        {
+            "brand": "Opel"
+        },
+        {
+            "brand": "Mazda"
+
+        },
+        {
+            "brand": "Audi"
+        },
+        {
+            "brand": "Volvo"
+        }
+    ]
+}
