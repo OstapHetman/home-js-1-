@@ -59,6 +59,7 @@ function getModels() {
 
                     models.push(x.model);
                 }
+
             }
         }
     }
@@ -121,6 +122,7 @@ function getImages() {
 
                     images.push(x.img);
                 }
+
             }
         }
     }
