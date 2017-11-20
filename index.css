@@ -74,10 +74,14 @@ ol {
     min-height: 65% !important;
 }
 
-form.card {
-    height: 280px;
-}
-
 .form-group.card-block {
     margin-bottom: 0;
+}
+
+#carImage {
+    height: 200px;
+}
+
+#carImage img {
+    position: inherit;
 }
