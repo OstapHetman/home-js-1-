@@ -58,7 +58,9 @@ ol {
     flex-direction: column;
     align-items: center;
     padding: 0;
-    margin-top: 1rem !important;
+    background-color: white;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .droptarget {
@@ -79,9 +81,29 @@ ol {
 }
 
 #carImage {
-    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #carImage img {
     position: inherit;
+    max-width: 40%;
+    height: auto;
+}
+
+.tasks ol li {
+    font-weight: 600;
+}
+
+.tasks li:first-child {
+    padding-top: 0;
+}
+
+.tasks li {
+    padding-top: 1em;
+}
+
+.tasks .btn {
+    margin-left: 3em;
 }
